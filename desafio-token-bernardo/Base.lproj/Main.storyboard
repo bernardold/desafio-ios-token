@@ -1,24 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="SWRevealView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="TKT-Up-NSm" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="RVC-Rk-rdC"/>
+                        <segue destination="3mU-vc-M36" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="J5f-QJ-kOB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="52" y="142"/>
+        </scene>
+        <!--Gamectionary-->
+        <scene sceneID="YoZ-QL-SQN">
+            <objects>
+                <viewController id="f9h-VX-sNg" customClass="GameListVC" customModule="desafio_token_bernardo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cXB-8W-Gfs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List of games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ca-p1-IeI">
+                                <rect key="frame" x="16" y="84" width="106.5" height="25"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z2L-fP-bbb">
+                                <rect key="frame" x="0.0" y="117" width="375" height="550"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ILQ-Oq-kbl">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ILQ-Oq-kbl" id="ZKE-PZ-wMy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yRN-EM-q13" firstAttribute="bottom" secondItem="Z2L-fP-bbb" secondAttribute="bottom" id="OmU-R4-VX1"/>
+                            <constraint firstItem="4Ca-p1-IeI" firstAttribute="leading" secondItem="yRN-EM-q13" secondAttribute="leading" constant="16" id="TWj-Qt-WA5"/>
+                            <constraint firstItem="4Ca-p1-IeI" firstAttribute="top" secondItem="yRN-EM-q13" secondAttribute="top" constant="20" id="VAa-7P-oCf"/>
+                            <constraint firstItem="Z2L-fP-bbb" firstAttribute="leading" secondItem="yRN-EM-q13" secondAttribute="leading" id="fDn-FJ-oHe"/>
+                            <constraint firstItem="yRN-EM-q13" firstAttribute="trailing" secondItem="Z2L-fP-bbb" secondAttribute="trailing" id="hHv-Dm-Wsa"/>
+                            <constraint firstItem="Z2L-fP-bbb" firstAttribute="top" secondItem="4Ca-p1-IeI" secondAttribute="bottom" constant="8" id="u97-P5-vPI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yRN-EM-q13"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gamectionary" id="znP-eN-sLX">
+                        <barButtonItem key="backBarButtonItem" title=" " id="WqA-JV-f1k"/>
+                        <barButtonItem key="leftBarButtonItem" title="User" image="burgericon" style="plain" id="4QT-un-xfy">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="profileBtn" destination="4QT-un-xfy" id="bkR-on-2bP"/>
+                        <segue destination="aG6-Oc-E3q" kind="show" identifier="toGameDetail" id="Gzo-uF-0Eu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ry9-ai-ls5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1876" y="487"/>
+        </scene>
+        <!--Game Details-->
+        <scene sceneID="wnR-UL-Gdc">
+            <objects>
+                <viewController id="aG6-Oc-E3q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u87-Bk-5E7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pXB-Pb-ATd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Game Details" id="UqG-8w-264"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdG-Eu-B1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2726" y="487"/>
+        </scene>
+        <!--User ProfileVC-->
+        <scene sceneID="eHt-Nd-Nqu">
+            <objects>
+                <viewController id="TKT-Up-NSm" customClass="UserProfileVC" customModule="desafio_token_bernardo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pF4-75-emm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aNh-yE-QNi"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Kd-J0-NRe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038" y="-221"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fj7-Zf-bqj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3mU-vc-M36" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N7e-2G-1nw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.15294117647058825" green="0.56862745098039214" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="f9h-VX-sNg" kind="relationship" relationship="rootViewController" id="8KK-Rk-hVe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4yU-6G-8qT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1036.8" y="487.55622188905551"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="burgericon" width="24" height="24"/>
+    </resources>
 </document>
