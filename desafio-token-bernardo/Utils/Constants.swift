@@ -8,6 +8,9 @@
 
 import Foundation
 
+// Completion for requests
+typealias CompletionHandler = (_ Success: Bool) -> ()
+
 // Endpoints
 let BASE_URL = "https://dl.dropboxusercontent.com/s/"
 let USER_URL = "\(BASE_URL)fiqendqz4l1xk61/userinfo"

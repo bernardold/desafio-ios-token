@@ -6,7 +6,7 @@ target 'desafio-token-bernardo' do
   use_frameworks!
 
   # Pods for desafio-token-bernardo
-  pod 'AlamofireDomain', '~> 4.1'
+  pod 'Alamofire', '~> 4.6'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'SWRevealViewController', '~> 2.3'
 
