@@ -20,6 +20,7 @@ class UserProfileVC: UIViewController, UserView {
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var birthdate: UILabel!
     @IBOutlet weak var fullAddress: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var presenter: UserPresentation!
     
@@ -38,10 +39,12 @@ class UserProfileVC: UIViewController, UserView {
     }
     
     func updateView(_ viewModel: UserViewModel) {
+        activityIndicator.startAnimating()
+        activityIndicator.isHidden = false;
+        
         let url = URL(string: viewModel.user.avatar)
         
         if let data = try? Data(contentsOf: url!) {
-            print(data)
             profileImage.image = UIImage(data: data)
         } else {
             profileImage.image = UIImage(named: "profileDefault")
@@ -51,5 +54,8 @@ class UserProfileVC: UIViewController, UserView {
         email.text = viewModel.user.email
         birthdate.text = viewModel.user.formattedBirthday
         fullAddress.text = viewModel.user.fullAddress
+        
+        activityIndicator.isHidden = true;
+        activityIndicator.stopAnimating()
     }
 }

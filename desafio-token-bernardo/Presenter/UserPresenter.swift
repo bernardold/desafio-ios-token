@@ -32,7 +32,6 @@ class UserPresenter: UserPresentation {
         }
         
         let user = UserVM(fullName: fullName, avatar: user.avatar, email: user.email, formattedBirthday: formattedBD, fullAddress: fullAddress)
-        print(user)
         return UserViewModel(user: user)
     }
     

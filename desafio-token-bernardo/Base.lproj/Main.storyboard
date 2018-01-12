@@ -164,35 +164,40 @@
                                             <constraint firstAttribute="height" constant="100" id="rcP-vB-D48"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bernardo Duarte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeM-ss-qaJ">
-                                        <rect key="frame" x="68" y="235" width="159" height="27.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeM-ss-qaJ">
+                                        <rect key="frame" x="147.5" y="235" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bernardoduarte@tokenlab.com.br" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMB-nL-2Qh">
-                                        <rect key="frame" x="41" y="277.5" width="212" height="19.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMB-nL-2Qh">
+                                        <rect key="frame" x="147" y="250" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19/11/1993" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHf-Gx-2ZI">
-                                        <rect key="frame" x="111" y="312" width="73" height="19.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHf-Gx-2ZI">
+                                        <rect key="frame" x="147.5" y="265" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Av. Comendador Alfredo Maffei, 1489 - Jardim Nova Sao Carlos, Brasil" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rj-Sf-aYq">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rj-Sf-aYq">
                                         <rect key="frame" x="16" y="347" width="263" height="51"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="meW-oT-AfM">
+                                        <rect key="frame" x="129" y="315" width="37" height="37"/>
+                                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="OeM-ss-qaJ" firstAttribute="centerX" secondItem="bbM-Pn-gFZ" secondAttribute="centerX" id="1ie-eR-16G"/>
                                     <constraint firstItem="RMB-nL-2Qh" firstAttribute="centerX" secondItem="bbM-Pn-gFZ" secondAttribute="centerX" id="8eq-1Z-FqV"/>
+                                    <constraint firstItem="meW-oT-AfM" firstAttribute="centerX" secondItem="bbM-Pn-gFZ" secondAttribute="centerX" id="A0e-Ov-Y2t"/>
                                     <constraint firstItem="LHf-Gx-2ZI" firstAttribute="top" secondItem="RMB-nL-2Qh" secondAttribute="bottom" constant="15" id="AOw-dr-i1h"/>
                                     <constraint firstAttribute="trailing" secondItem="7rj-Sf-aYq" secondAttribute="trailing" constant="16" id="C4V-uj-To5"/>
                                     <constraint firstItem="7rj-Sf-aYq" firstAttribute="top" secondItem="LHf-Gx-2ZI" secondAttribute="bottom" constant="15" id="EwO-tl-7k3"/>
@@ -201,6 +206,7 @@
                                     <constraint firstItem="7rj-Sf-aYq" firstAttribute="leading" secondItem="bbM-Pn-gFZ" secondAttribute="leading" constant="16" id="WGz-vO-l1a"/>
                                     <constraint firstItem="ibo-KZ-xaf" firstAttribute="top" secondItem="bbM-Pn-gFZ" secondAttribute="top" constant="120" id="ZPP-Pu-0RA"/>
                                     <constraint firstItem="ibo-KZ-xaf" firstAttribute="centerX" secondItem="bbM-Pn-gFZ" secondAttribute="centerX" id="hm2-Uh-glS"/>
+                                    <constraint firstItem="meW-oT-AfM" firstAttribute="centerY" secondItem="bbM-Pn-gFZ" secondAttribute="centerY" id="pRc-KP-87o"/>
                                     <constraint firstItem="RMB-nL-2Qh" firstAttribute="top" secondItem="OeM-ss-qaJ" secondAttribute="bottom" constant="15" id="zkK-1N-wHp"/>
                                 </constraints>
                             </view>
@@ -215,6 +221,7 @@
                         <viewLayoutGuide key="safeArea" id="aNh-yE-QNi"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="meW-oT-AfM" id="Bhu-Br-PGp"/>
                         <outlet property="birthdate" destination="LHf-Gx-2ZI" id="yPR-1L-Wn6"/>
                         <outlet property="email" destination="RMB-nL-2Qh" id="XVU-04-KfU"/>
                         <outlet property="fullAddress" destination="7rj-Sf-aYq" id="U5c-n7-IJy"/>
