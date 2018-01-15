@@ -70,16 +70,7 @@ extension GameListVC: UITableViewDelegate, UITableViewDataSource {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? GameCell {
             let game = self.gameList[indexPath.row]
-            cell.title.text = game.name!
-            cell.platformsLabel.text = game.platforms!
-            
-            let url = URL(string: game.imageURL)
-            if let data = try? Data(contentsOf: url!) {
-                cell.thumbnail.image = UIImage(data: data)
-            } else {
-                cell.thumbnail.image = UIImage(named: "gameDefault")
-            }
-            
+            cell.configureCell(game)
             return cell
         }
         return UITableViewCell()

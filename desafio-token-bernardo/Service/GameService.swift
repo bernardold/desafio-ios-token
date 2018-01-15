@@ -14,6 +14,7 @@ class GameService {
     static let instance = GameService()
     
     var games = [Game]()
+    var selectedGame: Game!
     
     func getGames(completion: @escaping CompletionHandler) {
         Alamofire.request(GAME_URL, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON { (response) in

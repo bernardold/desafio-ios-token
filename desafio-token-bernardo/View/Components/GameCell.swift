@@ -24,5 +24,16 @@ class GameCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func configureCell (_ game: GameViewModel) {
+        title.text = game.name!
+        platformsLabel.text = game.platforms!
+        
+        let url = URL(string: game.imageURL)
+        if let data = try? Data(contentsOf: url!) {
+            thumbnail.image = UIImage(data: data)
+        } else {
+            thumbnail.image = UIImage(named: "gameDefault")
+        }
+    }
 }
