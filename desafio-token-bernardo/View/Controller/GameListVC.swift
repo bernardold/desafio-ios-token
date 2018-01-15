@@ -83,4 +83,11 @@ extension GameListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return GameService.instance.games.count
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedGame = GameService.instance.games[indexPath.row]
+        GameService.instance.selectedGame = selectedGame
+        
+        performSegue(withIdentifier: GAME_DETAILS, sender: nil)
+    }
 }

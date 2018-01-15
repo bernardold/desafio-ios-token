@@ -17,6 +17,9 @@
 		D19574FB200CFC1A00E28814 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19574FA200CFC1A00E28814 /* GameViewModel.swift */; };
 		D19574FD200CFCB600E28814 /* GameListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19574FC200CFCB600E28814 /* GameListPresenter.swift */; };
 		D19574FF200D178200E28814 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19574FE200D178200E28814 /* RoundedImage.swift */; };
+		D1957501200D31E400E28814 /* GameDetailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1957500200D31E400E28814 /* GameDetailedVC.swift */; };
+		D1957503200D326F00E28814 /* GameDetailedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1957502200D326F00E28814 /* GameDetailedPresenter.swift */; };
+		D1957505200D421300E28814 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1957504200D421300E28814 /* RoundedButton.swift */; };
 		D1A250F420053D4F00D2F438 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A250F320053D4F00D2F438 /* UserProfileVC.swift */; };
 		D1A250F620053D7400D2F438 /* GameListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A250F520053D7400D2F438 /* GameListVC.swift */; };
 		D1A25109200550F600D2F438 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A25108200550F600D2F438 /* User.swift */; };
@@ -40,6 +43,9 @@
 		D19574FA200CFC1A00E28814 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		D19574FC200CFCB600E28814 /* GameListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListPresenter.swift; sourceTree = "<group>"; };
 		D19574FE200D178200E28814 /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
+		D1957500200D31E400E28814 /* GameDetailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailedVC.swift; sourceTree = "<group>"; };
+		D1957502200D326F00E28814 /* GameDetailedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailedPresenter.swift; sourceTree = "<group>"; };
+		D1957504200D421300E28814 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		D1A250F320053D4F00D2F438 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		D1A250F520053D7400D2F438 /* GameListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListVC.swift; sourceTree = "<group>"; };
 		D1A25108200550F600D2F438 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -89,6 +95,7 @@
 				D17895BD200798F5000BEED2 /* GameCell.swift */,
 				D17895BF2007992D000BEED2 /* CircleImage.swift */,
 				D19574FE200D178200E28814 /* RoundedImage.swift */,
+				D1957504200D421300E28814 /* RoundedButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -107,6 +114,7 @@
 			children = (
 				D1A250F320053D4F00D2F438 /* UserProfileVC.swift */,
 				D1A250F520053D7400D2F438 /* GameListVC.swift */,
+				D1957500200D31E400E28814 /* GameDetailedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -144,6 +152,7 @@
 			children = (
 				D17E0D972008E9910091A42A /* UserPresenter.swift */,
 				D19574FC200CFCB600E28814 /* GameListPresenter.swift */,
+				D1957502200D326F00E28814 /* GameDetailedPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -336,9 +345,12 @@
 				D17895C02007992D000BEED2 /* CircleImage.swift in Sources */,
 				D1A250F620053D7400D2F438 /* GameListVC.swift in Sources */,
 				D17895C22007B6D3000BEED2 /* GameService.swift in Sources */,
+				D1957503200D326F00E28814 /* GameDetailedPresenter.swift in Sources */,
 				D17E0D982008E9910091A42A /* UserPresenter.swift in Sources */,
+				D1957505200D421300E28814 /* RoundedButton.swift in Sources */,
 				D19574FF200D178200E28814 /* RoundedImage.swift in Sources */,
 				D1A25109200550F600D2F438 /* User.swift in Sources */,
+				D1957501200D31E400E28814 /* GameDetailedVC.swift in Sources */,
 				D1A250F420053D4F00D2F438 /* UserProfileVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
