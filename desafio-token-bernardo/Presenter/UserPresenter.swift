@@ -17,7 +17,7 @@ class UserPresenter: UserPresentation {
     
     var viewController: UserView!
     
-    func map(_ user: User) -> UserViewModel {
+    func mapUser(_ user: User) -> UserViewModel {
         
         let fullName = "\(user.name!) \(user.lastname!)"
         let fullAddress = "\(user.address!) - \(user.city!) - \(user.country!)"
@@ -31,15 +31,15 @@ class UserPresenter: UserPresentation {
             formattedBD = formatter.string(from: bd)
         }
         
-        let user = UserVM(fullName: fullName, avatar: user.avatar, email: user.email, formattedBirthday: formattedBD, fullAddress: fullAddress)
-        return UserViewModel(user: user)
+        let mappedUser = UserViewModel(fullName: fullName, avatar: user.avatar, email: user.email, formattedBirthday: formattedBD, fullAddress: fullAddress)
+        return mappedUser
     }
     
     func requestUser() {
         UserService.instance.getLoggedUser { (success) in
             if success {
                 if let user = UserService.instance.loggedUser {
-                    self.viewController.updateView(self.map(user))
+                    self.viewController.updateView(self.mapUser(user))
                 } else {
                     // error
                 }

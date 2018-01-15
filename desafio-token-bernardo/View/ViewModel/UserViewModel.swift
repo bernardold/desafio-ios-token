@@ -8,13 +8,10 @@
 
 import Foundation
 
-struct UserVM {
+struct UserViewModel {
     let fullName: String!
     let avatar: String!
     let email: String!
     let formattedBirthday: String!
     let fullAddress: String!
-}
-struct UserViewModel {
-    let user: UserVM!
 }

@@ -13,7 +13,7 @@ protocol UserView {
     func updateView(_ viewModel: UserViewModel)
 }
 
-class UserProfileVC: UIViewController, UserView {
+class UserProfileVC: UIViewController {
 
     @IBOutlet weak var profileImage: CircleImage!
     @IBOutlet weak var nameLastname: UILabel!
@@ -37,12 +37,15 @@ class UserProfileVC: UIViewController, UserView {
         presenter.viewController = self
         self.presenter = presenter
     }
+}
+
+extension UserProfileVC: UserView {
     
     func updateView(_ viewModel: UserViewModel) {
         activityIndicator.startAnimating()
         activityIndicator.isHidden = false;
         
-        let url = URL(string: viewModel.user.avatar)
+        let url = URL(string: viewModel.avatar)
         
         if let data = try? Data(contentsOf: url!) {
             profileImage.image = UIImage(data: data)
@@ -50,10 +53,10 @@ class UserProfileVC: UIViewController, UserView {
             profileImage.image = UIImage(named: "profileDefault")
         }
         
-        nameLastname.text = viewModel.user.fullName
-        email.text = viewModel.user.email
-        birthdate.text = viewModel.user.formattedBirthday
-        fullAddress.text = viewModel.user.fullAddress
+        nameLastname.text = viewModel.fullName
+        email.text = viewModel.email
+        birthdate.text = viewModel.formattedBirthday
+        fullAddress.text = viewModel.fullAddress
         
         activityIndicator.isHidden = true;
         activityIndicator.stopAnimating()

@@ -54,14 +54,14 @@
                                 <rect key="frame" x="0.0" y="53" width="375" height="550"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="68" id="ILQ-Oq-kbl" customClass="GameCell" customModule="desafio_token_bernardo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" rowHeight="68" id="ILQ-Oq-kbl" customClass="GameCell" customModule="desafio_token_bernardo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ILQ-Oq-kbl" id="ZKE-PZ-wMy">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Nwt-3D-Q5W" customClass="CircleImage" customModule="desafio_token_bernardo" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Nwt-3D-Q5W" customClass="RoundedImage" customModule="desafio_token_bernardo" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="8" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="P6G-z8-SwO"/>
@@ -74,7 +74,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PC, XBOX, PS4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qty-4B-F2k">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PC, XBOX, PS4" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qty-4B-F2k">
                                                     <rect key="frame" x="78" y="39.5" width="266" height="19.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                     <nil key="textColor"/>
@@ -90,6 +90,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="Qty-4B-F2k" secondAttribute="trailing" constant="16" id="nTO-a5-VBo"/>
                                                 <constraint firstItem="zFK-hK-qvC" firstAttribute="leading" secondItem="Nwt-3D-Q5W" secondAttribute="trailing" constant="12" id="wN7-8u-jIt"/>
                                                 <constraint firstAttribute="trailing" secondItem="zFK-hK-qvC" secondAttribute="trailing" constant="16" id="xVa-7k-aQg"/>
+                                                <constraint firstAttribute="bottom" secondItem="Qty-4B-F2k" secondAttribute="bottom" constant="8" id="yt2-Rn-MKO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -100,12 +101,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="7ie-xL-2el">
+                                <rect key="frame" x="169" y="283" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="yRN-EM-q13" firstAttribute="trailing" secondItem="4Ca-p1-IeI" secondAttribute="trailing" constant="16" id="2b6-Fd-SLX"/>
+                            <constraint firstItem="7ie-xL-2el" firstAttribute="centerX" secondItem="cXB-8W-Gfs" secondAttribute="centerX" id="Mqn-wG-KFE"/>
                             <constraint firstItem="yRN-EM-q13" firstAttribute="bottom" secondItem="Z2L-fP-bbb" secondAttribute="bottom" id="OmU-R4-VX1"/>
                             <constraint firstItem="4Ca-p1-IeI" firstAttribute="leading" secondItem="yRN-EM-q13" secondAttribute="leading" constant="16" id="TWj-Qt-WA5"/>
+                            <constraint firstItem="7ie-xL-2el" firstAttribute="centerY" secondItem="cXB-8W-Gfs" secondAttribute="centerY" id="V5c-Fh-klN"/>
                             <constraint firstItem="4Ca-p1-IeI" firstAttribute="top" secondItem="yRN-EM-q13" secondAttribute="top" constant="20" id="VAa-7P-oCf"/>
                             <constraint firstItem="Z2L-fP-bbb" firstAttribute="leading" secondItem="yRN-EM-q13" secondAttribute="leading" id="fDn-FJ-oHe"/>
                             <constraint firstItem="yRN-EM-q13" firstAttribute="trailing" secondItem="Z2L-fP-bbb" secondAttribute="trailing" id="hHv-Dm-Wsa"/>
@@ -120,6 +127,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="7ie-xL-2el" id="Feg-Mn-d1z"/>
                         <outlet property="profileBtn" destination="4QT-un-xfy" id="bkR-on-2bP"/>
                         <outlet property="tableView" destination="Z2L-fP-bbb" id="vsA-uD-Zp9"/>
                         <segue destination="aG6-Oc-E3q" kind="show" identifier="toGameDetail" id="Gzo-uF-0Eu"/>
@@ -261,6 +269,7 @@
     </scenes>
     <resources>
         <image name="burgericon" width="24" height="24"/>
+        <image name="gameDefault" width="200" height="200"/>
         <image name="profileDefault" width="192" height="192"/>
     </resources>
 </document>

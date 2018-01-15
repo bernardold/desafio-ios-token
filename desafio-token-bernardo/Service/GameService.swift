@@ -19,7 +19,7 @@ class GameService {
         Alamofire.request(GAME_URL, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON { (response) in
             if response.result.error == nil {
                 guard let data = response.data else { return }
-                if let json = JSON(data).array {
+                if let json = JSON(data)["games"].array {
                     for game in json {
                         let id = game["id"].intValue
                         let name = game["name"].stringValue
@@ -34,7 +34,6 @@ class GameService {
                     completion(true)
                 }
             } else {
-                print("deu merda no luau")
                 debugPrint(response.result.error as Any)
                 completion(false)
             }

@@ -9,10 +9,18 @@
 import UIKit
 import SWRevealViewController
 
-class GameListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol GameListView {
+    func updateView(_ viewModelArr: GameListViewModel)
+}
+
+class GameListVC: UIViewController {
     
     @IBOutlet weak var profileBtn: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    var presenter: GameListPresentation!
+    var gameList = [GameViewModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +28,18 @@ class GameListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
-        GameService.instance.getGames { (success) in
-        }
+        tableView.estimatedRowHeight = 68.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        presenter.requestGames()
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        let presenter = GameListPresenter()
+        presenter.viewController = self
+        self.presenter = presenter
     }
 
     func setupSlideoutView() {
@@ -31,9 +49,39 @@ class GameListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.view.addGestureRecognizer(revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(revealViewController().tapGestureRecognizer())
     }
+}
+
+extension GameListVC: GameListView {
     
+    func updateView(_ viewModelArr: GameListViewModel) {
+        activityIndicator.startAnimating()
+        activityIndicator.isHidden = false;
+
+        self.gameList = viewModelArr.games
+        self.tableView.reloadData()
+
+        activityIndicator.isHidden = true;
+        activityIndicator.stopAnimating()
+    }
+}
+
+extension GameListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? GameCell {
+            let game = self.gameList[indexPath.row]
+            cell.title.text = game.name!
+            cell.platformsLabel.text = game.platforms!
+            
+            let url = URL(string: game.imageURL)
+            if let data = try? Data(contentsOf: url!) {
+                cell.thumbnail.image = UIImage(data: data)
+            } else {
+                cell.thumbnail.image = UIImage(named: "gameDefault")
+            }
+            
+            return cell
+        }
         return UITableViewCell()
     }
     
