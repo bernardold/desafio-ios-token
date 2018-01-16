@@ -12,7 +12,6 @@ import SwiftyJSON
 
 class UserService {
     static let instance = UserService()
-    
     var loggedUser : User?
     
     func getLoggedUser(completion: @escaping CompletionHandler) {

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D30623B3E59EBE045B88BCD298416D96"
+               BlueprintIdentifier = "FC51D09A19EB1A6EC826D2ACB9F2A980"
                BuildableName = "Pods_desafio_token_bernardo.framework"
                BlueprintName = "Pods-desafio-token-bernardo"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D30623B3E59EBE045B88BCD298416D96"
+            BlueprintIdentifier = "FC51D09A19EB1A6EC826D2ACB9F2A980"
             BuildableName = "Pods_desafio_token_bernardo.framework"
             BlueprintName = "Pods-desafio-token-bernardo"
             ReferencedContainer = "container:Pods.xcodeproj">

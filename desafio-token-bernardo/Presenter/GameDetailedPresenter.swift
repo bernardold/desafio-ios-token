@@ -13,11 +13,10 @@ protocol GameDetailedPresentation {
 }
 
 class GameDetailedPresenter {
-    
     var viewController: GameDetailedVC!
     
     func mapGame(_ game: Game) -> GameViewModel {
-        return GameMapper.map(game)
+        return game.map()
     }
 }
 

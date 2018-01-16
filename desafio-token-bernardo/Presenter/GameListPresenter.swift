@@ -13,15 +13,13 @@ protocol GameListPresentation {
 }
 
 class GameListPresenter {
-    
     var viewController: GameListView!
     
     func mapGames(_ games: [Game]) -> GameListViewModel {
-        
         var mappedGames = [GameViewModel]()
         
         for game in games {
-           let mappedGame = GameMapper.map(game)
+           let mappedGame = game.map()
             mappedGames.append(mappedGame)
         }
         return GameListViewModel(games: mappedGames)
@@ -36,8 +34,8 @@ extension GameListPresenter: GameListPresentation {
             if success {
                 let games = GameService.instance.games
                 if games.count > 0 {
-                    self.viewController.stopLoading()
                     self.viewController.updateView(self.mapGames(games))
+                    self.viewController.stopLoading()
                 } else {
                     // error
                 }

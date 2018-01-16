@@ -8,15 +8,14 @@
 
 import Foundation
 
-class GameMapper {
-    
-    static func map(_ game: Game) -> GameViewModel {
-        let name = game.name
-        let imageURL = game.image
-        let releaseDate = game.releaseDate
-        let trailerURL = game.trailer
-        let platforms = game.platforms.joined(separator: ", ")
+extension Game {
+    func map() -> GameViewModel {
+        let platforms = self.platforms.joined(separator: ", ")
         
-        return GameViewModel(name: name, imageURL: imageURL, releaseDate: releaseDate, trailerURL: trailerURL, platforms: platforms)
+        let videoURL = self.trailer
+        let idx = videoURL.index(after: videoURL.index(of: "=")!)
+        let videoID = String(videoURL[idx...])
+
+        return GameViewModel(name: name, imageURL: image, releaseDate: releaseDate, youtubeVideoID: videoID, platforms: platforms)
     }
 }

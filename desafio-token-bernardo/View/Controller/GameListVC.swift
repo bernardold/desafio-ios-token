@@ -28,7 +28,6 @@ class GameListVC: UIViewController {
         setupSlideoutView()
         tableView.delegate = self
         tableView.dataSource = self
-
         tableView.estimatedRowHeight = 68.0
         tableView.rowHeight = UITableViewAutomaticDimension
 

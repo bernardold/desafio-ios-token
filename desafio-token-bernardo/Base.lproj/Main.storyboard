@@ -144,12 +144,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Yfh-F3-Ltl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="tiy-Oe-7Wl"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYO-TQ-56k">
                                 <rect key="frame" x="16" y="220" width="105.5" height="24"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
@@ -174,46 +168,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31R-lH-WoL" customClass="RoundedButton" customModule="desafio_token_bernardo" customModuleProvider="target">
-                                <rect key="frame" x="50" y="421" width="275" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.3921568627" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kov-A4-6qf" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Elg-Pb-sUq"/>
+                                    <constraint firstAttribute="height" constant="200" id="WFU-tN-aZ2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                <state key="normal" title="Watch Trailer">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="trailerPressed:" destination="aG6-Oc-E3q" eventType="touchUpInside" id="zcr-1Y-Lhk"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LE1-jl-7bq" firstAttribute="top" secondItem="iYO-TQ-56k" secondAttribute="bottom" constant="8" id="4d9-bo-6bH"/>
-                            <constraint firstItem="Yfh-F3-Ltl" firstAttribute="top" secondItem="pXB-Pb-ATd" secondAttribute="top" id="5Jn-eB-M65"/>
-                            <constraint firstItem="Yfh-F3-Ltl" firstAttribute="leading" secondItem="pXB-Pb-ATd" secondAttribute="leading" id="7Bw-Vm-234"/>
-                            <constraint firstItem="iYO-TQ-56k" firstAttribute="top" secondItem="Yfh-F3-Ltl" secondAttribute="bottom" constant="20" id="JcW-qo-GJq"/>
+                            <constraint firstItem="pXB-Pb-ATd" firstAttribute="trailing" secondItem="kov-A4-6qf" secondAttribute="trailing" id="9mE-Zl-x8r"/>
+                            <constraint firstItem="kov-A4-6qf" firstAttribute="top" secondItem="pXB-Pb-ATd" secondAttribute="top" id="JkK-cf-JUf"/>
                             <constraint firstItem="ps4-hN-ulQ" firstAttribute="top" secondItem="LE1-jl-7bq" secondAttribute="bottom" constant="20" id="NGb-8z-D3M"/>
-                            <constraint firstItem="31R-lH-WoL" firstAttribute="leading" secondItem="pXB-Pb-ATd" secondAttribute="leading" constant="50" id="Qfp-de-m1f"/>
-                            <constraint firstItem="31R-lH-WoL" firstAttribute="centerX" secondItem="u87-Bk-5E7" secondAttribute="centerX" id="Sxo-Mb-ofk"/>
                             <constraint firstItem="iYO-TQ-56k" firstAttribute="leading" secondItem="pXB-Pb-ATd" secondAttribute="leading" constant="16" id="U2s-WL-dwa"/>
                             <constraint firstItem="Xds-T9-ZKj" firstAttribute="top" secondItem="ps4-hN-ulQ" secondAttribute="bottom" constant="8" id="X3c-lz-nd9"/>
-                            <constraint firstItem="31R-lH-WoL" firstAttribute="top" secondItem="Xds-T9-ZKj" secondAttribute="bottom" constant="70" id="Zml-BF-UUY"/>
+                            <constraint firstItem="iYO-TQ-56k" firstAttribute="top" secondItem="kov-A4-6qf" secondAttribute="bottom" constant="20" id="YbV-4I-psj"/>
                             <constraint firstItem="Xds-T9-ZKj" firstAttribute="leading" secondItem="pXB-Pb-ATd" secondAttribute="leading" constant="24" id="clc-fS-yDn"/>
                             <constraint firstItem="ps4-hN-ulQ" firstAttribute="leading" secondItem="pXB-Pb-ATd" secondAttribute="leading" constant="16" id="eCU-dW-gPG"/>
-                            <constraint firstItem="pXB-Pb-ATd" firstAttribute="trailing" secondItem="Yfh-F3-Ltl" secondAttribute="trailing" id="fOM-is-abC"/>
+                            <constraint firstItem="kov-A4-6qf" firstAttribute="leading" secondItem="pXB-Pb-ATd" secondAttribute="leading" id="pGK-LV-S1M"/>
                             <constraint firstItem="LE1-jl-7bq" firstAttribute="leading" secondItem="pXB-Pb-ATd" secondAttribute="leading" constant="24" id="xHg-zq-xab"/>
-                            <constraint firstItem="pXB-Pb-ATd" firstAttribute="trailing" secondItem="31R-lH-WoL" secondAttribute="trailing" constant="50" id="zI7-60-0p3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pXB-Pb-ATd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Game Title" id="UqG-8w-264"/>
                     <connections>
-                        <outlet property="gameImage" destination="Yfh-F3-Ltl" id="DOf-N7-ZFl"/>
                         <outlet property="platformsLabel" destination="Xds-T9-ZKj" id="yc5-XG-T1X"/>
                         <outlet property="releaseDateLabel" destination="LE1-jl-7bq" id="0pr-cv-uzF"/>
+                        <outlet property="youtubePlayer" destination="kov-A4-6qf" id="iMN-Ly-98z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdG-Eu-B1e" userLabel="First Responder" sceneMemberID="firstResponder"/>

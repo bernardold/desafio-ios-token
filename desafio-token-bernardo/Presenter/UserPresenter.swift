@@ -14,11 +14,9 @@ protocol UserPresentation {
 }
 
 class UserPresenter: UserPresentation {
-    
     var viewController: UserView!
     
     func mapUser(_ user: User) -> UserViewModel {
-        
         let fullName = "\(user.name) \(user.lastname)"
         let fullAddress = "\(user.address) - \(user.city) - \(user.country)"
         
@@ -40,8 +38,8 @@ class UserPresenter: UserPresentation {
         UserService.instance.getLoggedUser { (success) in
             if success {
                 if let user = UserService.instance.loggedUser {
-                    self.viewController.stopLoading()
                     self.viewController.updateView(self.mapUser(user))
+                    self.viewController.stopLoading()
                 } else {
                     // error
                 }

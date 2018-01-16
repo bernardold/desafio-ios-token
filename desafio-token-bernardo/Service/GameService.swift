@@ -12,7 +12,6 @@ import SwiftyJSON
 
 class GameService {
     static let instance = GameService()
-    
     var games = [Game]()
     var selectedGame: Game!
     

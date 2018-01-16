@@ -12,7 +12,7 @@ struct GameViewModel {
     let name: String
     let imageURL: String
     let releaseDate: String
-    let trailerURL: String
+    let youtubeVideoID: String
     let platforms: String
 }
 
