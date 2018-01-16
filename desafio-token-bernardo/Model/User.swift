@@ -9,13 +9,13 @@
 import Foundation
 
 struct User {
-    public private(set) var  name: String!
-    public private(set) var  lastname: String!
-    public private(set) var  avatar: String!
-    public private(set) var  email: String!
-    public private(set) var  birthday: String!
-    public private(set) var  address: String!
-    public private(set) var  city: String!
-    public private(set) var  country: String!
-    public private(set) var  token: String!
+    public private(set) var  name: String
+    public private(set) var  lastname: String
+    public private(set) var  avatar: String
+    public private(set) var  email: String
+    public private(set) var  birthday: String
+    public private(set) var  address: String
+    public private(set) var  city: String
+    public private(set) var  country: String
+    public private(set) var  token: String
 }

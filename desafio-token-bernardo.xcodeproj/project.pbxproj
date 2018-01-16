@@ -14,6 +14,7 @@
 		D17895C22007B6D3000BEED2 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17895C12007B6D3000BEED2 /* GameService.swift */; };
 		D17E0D962008E86E0091A42A /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E0D952008E86E0091A42A /* UserViewModel.swift */; };
 		D17E0D982008E9910091A42A /* UserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E0D972008E9910091A42A /* UserPresenter.swift */; };
+		D1820A14200E23640014BFFA /* GameMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1820A13200E23640014BFFA /* GameMapper.swift */; };
 		D19574FB200CFC1A00E28814 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19574FA200CFC1A00E28814 /* GameViewModel.swift */; };
 		D19574FD200CFCB600E28814 /* GameListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19574FC200CFCB600E28814 /* GameListPresenter.swift */; };
 		D19574FF200D178200E28814 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19574FE200D178200E28814 /* RoundedImage.swift */; };
@@ -40,6 +41,7 @@
 		D17895C12007B6D3000BEED2 /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
 		D17E0D952008E86E0091A42A /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		D17E0D972008E9910091A42A /* UserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPresenter.swift; sourceTree = "<group>"; };
+		D1820A13200E23640014BFFA /* GameMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMapper.swift; sourceTree = "<group>"; };
 		D19574FA200CFC1A00E28814 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		D19574FC200CFCB600E28814 /* GameListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListPresenter.swift; sourceTree = "<group>"; };
 		D19574FE200D178200E28814 /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				D1C952832003D65200B7E1E9 /* Constants.swift */,
+				D1820A13200E23640014BFFA /* GameMapper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -313,12 +316,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-desafio-token-bernardo/Pods-desafio-token-bernardo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SWRevealViewController/SWRevealViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWRevealViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -346,6 +351,7 @@
 				D1A250F620053D7400D2F438 /* GameListVC.swift in Sources */,
 				D17895C22007B6D3000BEED2 /* GameService.swift in Sources */,
 				D1957503200D326F00E28814 /* GameDetailedPresenter.swift in Sources */,
+				D1820A14200E23640014BFFA /* GameMapper.swift in Sources */,
 				D17E0D982008E9910091A42A /* UserPresenter.swift in Sources */,
 				D1957505200D421300E28814 /* RoundedButton.swift in Sources */,
 				D19574FF200D178200E28814 /* RoundedImage.swift in Sources */,
@@ -425,7 +431,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -476,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -491,6 +497,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UCP4PUH258;
 				INFOPLIST_FILE = "desafio-token-bernardo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "token.desafio-token-bernardo";
@@ -508,6 +515,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UCP4PUH258;
 				INFOPLIST_FILE = "desafio-token-bernardo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "token.desafio-token-bernardo";

@@ -19,8 +19,8 @@ class UserPresenter: UserPresentation {
     
     func mapUser(_ user: User) -> UserViewModel {
         
-        let fullName = "\(user.name!) \(user.lastname!)"
-        let fullAddress = "\(user.address!) - \(user.city!) - \(user.country!)"
+        let fullName = "\(user.name) \(user.lastname)"
+        let fullAddress = "\(user.address) - \(user.city) - \(user.country)"
         
         // Formatting Date
         var formattedBD = ""
@@ -36,9 +36,11 @@ class UserPresenter: UserPresentation {
     }
     
     func requestUser() {
+        viewController.startLoading()
         UserService.instance.getLoggedUser { (success) in
             if success {
                 if let user = UserService.instance.loggedUser {
+                    self.viewController.stopLoading()
                     self.viewController.updateView(self.mapUser(user))
                 } else {
                     // error

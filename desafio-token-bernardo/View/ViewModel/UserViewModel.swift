@@ -9,9 +9,9 @@
 import Foundation
 
 struct UserViewModel {
-    let fullName: String!
-    let avatar: String!
-    let email: String!
-    let formattedBirthday: String!
-    let fullAddress: String!
+    let fullName: String
+    let avatar: String
+    let email: String
+    let formattedBirthday: String
+    let fullAddress: String
 }

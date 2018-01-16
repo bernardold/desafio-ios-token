@@ -9,11 +9,11 @@
 import Foundation
 
 struct GameViewModel {
-    let name: String!
-    let imageURL: String!
-    let releaseDate: String!
-    let trailerURL: String!
-    let platforms: String!
+    let name: String
+    let imageURL: String
+    let releaseDate: String
+    let trailerURL: String
+    let platforms: String
 }
 
 struct GameListViewModel {

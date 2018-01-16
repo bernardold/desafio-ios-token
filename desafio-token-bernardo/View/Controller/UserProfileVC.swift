@@ -8,20 +8,21 @@
 
 import UIKit
 import SWRevealViewController
+import Kingfisher
 
 protocol UserView {
     func updateView(_ viewModel: UserViewModel)
+    func startLoading()
+    func stopLoading()
 }
 
 class UserProfileVC: UIViewController {
-
     @IBOutlet weak var profileImage: CircleImage!
     @IBOutlet weak var nameLastname: UILabel!
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var birthdate: UILabel!
     @IBOutlet weak var fullAddress: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
     var presenter: UserPresentation!
     
     override func viewDidLoad() {
@@ -40,25 +41,22 @@ class UserProfileVC: UIViewController {
 }
 
 extension UserProfileVC: UserView {
+    func startLoading() {
+        activityIndicator.startAnimating()
+    }
+    
+    func stopLoading() {
+        activityIndicator.stopAnimating()
+    }
     
     func updateView(_ viewModel: UserViewModel) {
-        activityIndicator.startAnimating()
-        activityIndicator.isHidden = false;
-        
         let url = URL(string: viewModel.avatar)
-        
-        if let data = try? Data(contentsOf: url!) {
-            profileImage.image = UIImage(data: data)
-        } else {
-            profileImage.image = UIImage(named: "profileDefault")
-        }
+        let image = #imageLiteral(resourceName: "profileDefault")
+        profileImage.kf.setImage(with: url, placeholder: image)
         
         nameLastname.text = viewModel.fullName
         email.text = viewModel.email
         birthdate.text = viewModel.formattedBirthday
         fullAddress.text = viewModel.fullAddress
-        
-        activityIndicator.isHidden = true;
-        activityIndicator.stopAnimating()
     }
 }

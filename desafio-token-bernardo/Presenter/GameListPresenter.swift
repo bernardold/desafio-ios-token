@@ -21,13 +21,7 @@ class GameListPresenter {
         var mappedGames = [GameViewModel]()
         
         for game in games {
-            let name = game.name!
-            let imageURL = game.image!
-            let releaseDate = game.releaseDate!
-            let trailerURL = game.trailer!
-            let platforms = game.platforms!.joined(separator: ", ")
-            
-            let mappedGame = GameViewModel(name: name, imageURL: imageURL, releaseDate: releaseDate, trailerURL: trailerURL, platforms: platforms)
+           let mappedGame = GameMapper.map(game)
             mappedGames.append(mappedGame)
         }
         return GameListViewModel(games: mappedGames)
@@ -37,10 +31,12 @@ class GameListPresenter {
 extension GameListPresenter: GameListPresentation {
     
     func requestGames() {
+        viewController.startLoading()
         GameService.instance.getGames { (success) in
             if success {
                 let games = GameService.instance.games
                 if games.count > 0 {
+                    self.viewController.stopLoading()
                     self.viewController.updateView(self.mapGames(games))
                 } else {
                     // error

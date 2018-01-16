@@ -11,35 +11,44 @@ import SWRevealViewController
 
 protocol GameListView {
     func updateView(_ viewModelArr: GameListViewModel)
+    func startLoading()
+    func stopLoading()
 }
 
 class GameListVC: UIViewController {
-    
     @IBOutlet weak var profileBtn: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
     var presenter: GameListPresentation!
     var gameList = [GameViewModel]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupSlideoutView()
+
+        setupSlideoutView()
         tableView.delegate = self
         tableView.dataSource = self
-        
+
         tableView.estimatedRowHeight = 68.0
         tableView.rowHeight = UITableViewAutomaticDimension
-        
+
         presenter.requestGames()
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+
         let presenter = GameListPresenter()
         presenter.viewController = self
         self.presenter = presenter
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPath, animated: animated)
+        }
     }
 
     func setupSlideoutView() {
@@ -52,23 +61,24 @@ class GameListVC: UIViewController {
 }
 
 extension GameListVC: GameListView {
-    
-    func updateView(_ viewModelArr: GameListViewModel) {
+    func startLoading() {
         activityIndicator.startAnimating()
-        activityIndicator.isHidden = false;
+    }
+    
+    func stopLoading() {
+        activityIndicator.stopAnimating()
+    }
 
+    func updateView(_ viewModelArr: GameListViewModel) {
         self.gameList = viewModelArr.games
         self.tableView.reloadData()
-
-        activityIndicator.isHidden = true;
-        activityIndicator.stopAnimating()
     }
 }
 
 extension GameListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? GameCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: Constants.reusableCell.game, for: indexPath) as? GameCell {
             let game = self.gameList[indexPath.row]
             cell.configureCell(game)
             return cell
@@ -88,6 +98,6 @@ extension GameListVC: UITableViewDelegate, UITableViewDataSource {
         let selectedGame = GameService.instance.games[indexPath.row]
         GameService.instance.selectedGame = selectedGame
         
-        performSegue(withIdentifier: GAME_DETAILS, sender: nil)
+        performSegue(withIdentifier: Constants.segue.toGameDetail, sender: nil)
     }
 }

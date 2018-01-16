@@ -11,11 +11,18 @@ import Foundation
 // Completion for requests
 typealias CompletionHandler = (_ Success: Bool) -> ()
 
-// Endpoints
-let BASE_URL = "https://dl.dropboxusercontent.com/s/"
-let USER_URL = "\(BASE_URL)fiqendqz4l1xk61/userinfo"
-let GAME_URL = "\(BASE_URL)1b7jlwii7jfvuh0/games"
-
-
-//Segues
-let GAME_DETAILS = "toGameDetail"
+enum Constants {
+    enum URL {
+        static var base = "https://dl.dropboxusercontent.com/s/"
+        static var user = "\(Constants.URL.base)fiqendqz4l1xk61/userinfo"
+        static var game = "\(Constants.URL.base)1b7jlwii7jfvuh0/games"
+    }
+    
+    enum segue {
+        static var toGameDetail = "toGameDetail"
+    }
+    
+    enum reusableCell {
+        static var game = "gameCell"
+    }
+}

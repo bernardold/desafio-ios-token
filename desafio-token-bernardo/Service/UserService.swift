@@ -16,7 +16,7 @@ class UserService {
     var loggedUser : User?
     
     func getLoggedUser(completion: @escaping CompletionHandler) {
-        Alamofire.request(USER_URL, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON { (response) in
+        Alamofire.request(Constants.URL.user, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON { (response) in
             if response.result.error == nil {
                 guard let data = response.data else { return }
                 let json = JSON(data)

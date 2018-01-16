@@ -17,13 +17,7 @@ class GameDetailedPresenter {
     var viewController: GameDetailedVC!
     
     func mapGame(_ game: Game) -> GameViewModel {
-        let name = game.name!
-        let imageURL = game.image!
-        let releaseDate = game.releaseDate!
-        let trailerURL = game.trailer!
-        let platforms = game.platforms!.joined(separator: ", ")
-        
-        return GameViewModel(name: name, imageURL: imageURL, releaseDate: releaseDate, trailerURL: trailerURL, platforms: platforms)
+        return GameMapper.map(game)
     }
 }
 

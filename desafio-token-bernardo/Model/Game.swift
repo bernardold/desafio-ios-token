@@ -9,10 +9,10 @@
 import Foundation
 
 struct Game {
-    public private(set) var  id: Int!
-    public private(set) var  name: String?
-    public private(set) var  image: String?
-    public private(set) var  releaseDate: String?
-    public private(set) var  trailer: String?
-    public private(set) var  platforms: [String]?
+    public private(set) var  id: Int
+    public private(set) var  name: String
+    public private(set) var  image: String
+    public private(set) var  releaseDate: String
+    public private(set) var  trailer: String
+    public private(set) var  platforms: [String]
 }

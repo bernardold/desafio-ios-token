@@ -9,5 +9,6 @@ target 'desafio-token-bernardo' do
   pod 'Alamofire', '~> 4.6'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'SWRevealViewController', '~> 2.3'
+  pod 'Kingfisher', '~> 4.6'
 
 end

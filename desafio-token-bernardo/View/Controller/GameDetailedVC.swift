@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 protocol GameDetailedView {
     func updateView(_ viewModel: GameViewModel)
@@ -47,14 +48,11 @@ extension GameDetailedVC: GameDetailedView {
         self.title = viewModel.name
 
         let url = URL(string: viewModel.imageURL)
-        if let data = try? Data(contentsOf: url!) {
-            gameImage.image = UIImage(data: data)
-        } else {
-            gameImage.image = UIImage(named: "gameDefault")
-        }
+        let image = #imageLiteral(resourceName: "gameDefault")
+        gameImage.kf.setImage(with: url, placeholder: image)
         
         releaseDateLabel.text = viewModel.releaseDate
         platformsLabel.text = viewModel.platforms
-        self.externalTrailerURL = viewModel.trailerURL
+        externalTrailerURL = viewModel.trailerURL
     }
 }
