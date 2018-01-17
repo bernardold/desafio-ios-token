@@ -19,10 +19,12 @@ enum Constants {
     }
     
     enum segue {
-        static var toGameDetail = "toGameDetail"
+        static var fromTableToGameDetail = "tableToGameDetail"
+        static var fromCollectionToGameDetail = "collectionToGameDetail"
     }
     
     enum reusableCell {
-        static var game = "gameCell"
+        static var gameTableCell = "gameTableCell"
+        static var gameCollectionCell = "gameCollectionCell"
     }
 }

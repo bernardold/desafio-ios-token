@@ -11,6 +11,7 @@ import SWRevealViewController
 
 protocol GameListView {
     func updateView(_ viewModelArr: GameListViewModel)
+    func showGameDetail()
     func startLoading()
     func stopLoading()
 }
@@ -72,12 +73,16 @@ extension GameListVC: GameListView {
         self.gameList = viewModelArr.games
         self.tableView.reloadData()
     }
+    
+    func showGameDetail() {
+        performSegue(withIdentifier: Constants.segue.fromTableToGameDetail, sender: nil)
+    }
 }
 
 extension GameListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: Constants.reusableCell.game, for: indexPath) as? GameCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: Constants.reusableCell.gameTableCell, for: indexPath) as? GameTableCell {
             let game = self.gameList[indexPath.row]
             cell.configureCell(game)
             return cell
@@ -90,13 +95,10 @@ extension GameListVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return GameService.instance.games.count
+        return gameList.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedGame = GameService.instance.games[indexPath.row]
-        GameService.instance.selectedGame = selectedGame
-        
-        performSegue(withIdentifier: Constants.segue.toGameDetail, sender: nil)
+        presenter.selectGame(withIndex: indexPath)
     }
 }

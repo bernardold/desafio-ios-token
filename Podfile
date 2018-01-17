@@ -11,5 +11,6 @@ target 'desafio-token-bernardo' do
   pod 'SWRevealViewController', '~> 2.3'
   pod 'Kingfisher', '~> 4.6'
   pod 'youtube-ios-player-helper', '~> 0.1'
+  pod 'DeviceKit', '~> 1.4'
 
 end

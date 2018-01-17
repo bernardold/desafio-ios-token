@@ -10,7 +10,9 @@ import Foundation
 
 extension Game {
     func map() -> GameViewModel {
-        let platforms = self.platforms.joined(separator: ", ")
+        let platforms = self.platforms.map { (platform) -> String in
+            platform.rawValue
+        }.joined(separator: ", ")
         
         let videoURL = self.trailer
         let idx = videoURL.index(after: videoURL.index(of: "=")!)

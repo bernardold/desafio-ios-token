@@ -9,12 +9,12 @@
 import UIKit
 import Kingfisher
 
-class GameCell: UITableViewCell {
+class GameTableCell: UITableViewCell {
 
     @IBOutlet weak var thumbnail: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var platformsLabel: UILabel!
-
+    
     func configureCell (_ game: GameViewModel) {
         title.text = game.name
         platformsLabel.text = game.platforms

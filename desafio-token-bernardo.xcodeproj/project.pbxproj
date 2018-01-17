@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		8B2CE78A88FAF668CF574258 /* Pods_desafio_token_bernardo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6918F7FF2144E541B42FDB1D /* Pods_desafio_token_bernardo.framework */; };
 		D17895BB20078AFB000BEED2 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17895BA20078AFB000BEED2 /* UserService.swift */; };
-		D17895BE200798F5000BEED2 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17895BD200798F5000BEED2 /* GameCell.swift */; };
+		D17895BE200798F5000BEED2 /* GameTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17895BD200798F5000BEED2 /* GameTableCell.swift */; };
 		D17895C02007992D000BEED2 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17895BF2007992D000BEED2 /* CircleImage.swift */; };
 		D17895C22007B6D3000BEED2 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17895C12007B6D3000BEED2 /* GameService.swift */; };
 		D17E0D962008E86E0091A42A /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E0D952008E86E0091A42A /* UserViewModel.swift */; };
 		D17E0D982008E9910091A42A /* UserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E0D972008E9910091A42A /* UserPresenter.swift */; };
 		D1820A14200E23640014BFFA /* GameMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1820A13200E23640014BFFA /* GameMapper.swift */; };
+		D1820A16200E68A60014BFFA /* GameCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1820A15200E68A60014BFFA /* GameCollectionCell.swift */; };
+		D1820A18200E6C080014BFFA /* GameGridVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1820A17200E6C080014BFFA /* GameGridVC.swift */; };
+		D1820A1A200E6DDF0014BFFA /* GameGridPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1820A19200E6DDF0014BFFA /* GameGridPresenter.swift */; };
 		D19574FB200CFC1A00E28814 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19574FA200CFC1A00E28814 /* GameViewModel.swift */; };
 		D19574FD200CFCB600E28814 /* GameListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19574FC200CFCB600E28814 /* GameListPresenter.swift */; };
 		D19574FF200D178200E28814 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19574FE200D178200E28814 /* RoundedImage.swift */; };
@@ -36,12 +39,15 @@
 		521FD6DA9F5C033957745C55 /* Pods-desafio-token-bernardo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-token-bernardo.release.xcconfig"; path = "Pods/Target Support Files/Pods-desafio-token-bernardo/Pods-desafio-token-bernardo.release.xcconfig"; sourceTree = "<group>"; };
 		6918F7FF2144E541B42FDB1D /* Pods_desafio_token_bernardo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafio_token_bernardo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17895BA20078AFB000BEED2 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		D17895BD200798F5000BEED2 /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
+		D17895BD200798F5000BEED2 /* GameTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableCell.swift; sourceTree = "<group>"; };
 		D17895BF2007992D000BEED2 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		D17895C12007B6D3000BEED2 /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
 		D17E0D952008E86E0091A42A /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		D17E0D972008E9910091A42A /* UserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPresenter.swift; sourceTree = "<group>"; };
 		D1820A13200E23640014BFFA /* GameMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMapper.swift; sourceTree = "<group>"; };
+		D1820A15200E68A60014BFFA /* GameCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionCell.swift; sourceTree = "<group>"; };
+		D1820A17200E6C080014BFFA /* GameGridVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGridVC.swift; sourceTree = "<group>"; };
+		D1820A19200E6DDF0014BFFA /* GameGridPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGridPresenter.swift; sourceTree = "<group>"; };
 		D19574FA200CFC1A00E28814 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		D19574FC200CFCB600E28814 /* GameListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListPresenter.swift; sourceTree = "<group>"; };
 		D19574FE200D178200E28814 /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
@@ -94,7 +100,8 @@
 		D17895BC200798C9000BEED2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D17895BD200798F5000BEED2 /* GameCell.swift */,
+				D17895BD200798F5000BEED2 /* GameTableCell.swift */,
+				D1820A15200E68A60014BFFA /* GameCollectionCell.swift */,
 				D17895BF2007992D000BEED2 /* CircleImage.swift */,
 				D19574FE200D178200E28814 /* RoundedImage.swift */,
 				D1957504200D421300E28814 /* RoundedButton.swift */,
@@ -116,6 +123,7 @@
 			children = (
 				D1A250F320053D4F00D2F438 /* UserProfileVC.swift */,
 				D1A250F520053D7400D2F438 /* GameListVC.swift */,
+				D1820A17200E6C080014BFFA /* GameGridVC.swift */,
 				D1957500200D31E400E28814 /* GameDetailedVC.swift */,
 			);
 			path = Controller;
@@ -154,6 +162,7 @@
 			children = (
 				D17E0D972008E9910091A42A /* UserPresenter.swift */,
 				D19574FC200CFCB600E28814 /* GameListPresenter.swift */,
+				D1820A19200E6DDF0014BFFA /* GameGridPresenter.swift */,
 				D1957502200D326F00E28814 /* GameDetailedPresenter.swift */,
 			);
 			path = Presenter;
@@ -316,6 +325,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-desafio-token-bernardo/Pods-desafio-token-bernardo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SWRevealViewController/SWRevealViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -324,6 +334,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWRevealViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -345,11 +356,14 @@
 				D17895BB20078AFB000BEED2 /* UserService.swift in Sources */,
 				D1C952712003CD4C00B7E1E9 /* AppDelegate.swift in Sources */,
 				D1A2510B2005510000D2F438 /* Game.swift in Sources */,
-				D17895BE200798F5000BEED2 /* GameCell.swift in Sources */,
+				D1820A1A200E6DDF0014BFFA /* GameGridPresenter.swift in Sources */,
+				D17895BE200798F5000BEED2 /* GameTableCell.swift in Sources */,
 				D19574FB200CFC1A00E28814 /* GameViewModel.swift in Sources */,
+				D1820A18200E6C080014BFFA /* GameGridVC.swift in Sources */,
 				D1C952842003D65200B7E1E9 /* Constants.swift in Sources */,
 				D17E0D962008E86E0091A42A /* UserViewModel.swift in Sources */,
 				D17895C02007992D000BEED2 /* CircleImage.swift in Sources */,
+				D1820A16200E68A60014BFFA /* GameCollectionCell.swift in Sources */,
 				D1A250F620053D7400D2F438 /* GameListVC.swift in Sources */,
 				D17895C22007B6D3000BEED2 /* GameService.swift in Sources */,
 				D1957503200D326F00E28814 /* GameDetailedPresenter.swift in Sources */,

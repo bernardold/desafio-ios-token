@@ -26,7 +26,9 @@ class GameService {
                         let image = game["image"].stringValue
                         let releaseDate = game["release_date"].stringValue
                         let trailer = game["trailer"].stringValue
-                        let platforms = game["platforms"].arrayValue.map({$0.stringValue})
+                        let platforms = game["platforms"].arrayValue.map({
+                            Platform(rawValue: $0.stringValue)!
+                        })
                         
                         let newGame = Game(id: id, name: name, image: image, releaseDate: releaseDate, trailer: trailer, platforms: platforms)
                         self.games.append(newGame)

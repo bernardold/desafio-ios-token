@@ -1,33 +1,33 @@
 //
-//  GameListPresenter.swift
+//  GameGridPresenter.swift
 //  desafio-token-bernardo
 //
-//  Created by Bernardo Duarte on 1/15/18.
+//  Created by Bernardo Duarte on 1/16/18.
 //  Copyright © 2018 Bernardo Duarte. All rights reserved.
 //
 
 import Foundation
 
-protocol GameListPresentation {
+protocol GameGridPresentation {
     func requestGames()
     func selectGame(withIndex: IndexPath)
 }
 
-class GameListPresenter {
-    var viewController: GameListView!
+class GameGridPresenter {
+    var viewController: GameGridView!
     
     func mapGames(_ games: [Game]) -> GameListViewModel {
         var mappedGames = [GameViewModel]()
         
         for game in games {
-           let mappedGame = game.map()
+            let mappedGame = game.map()
             mappedGames.append(mappedGame)
         }
         return GameListViewModel(games: mappedGames)
     }
 }
 
-extension GameListPresenter: GameListPresentation {
+extension GameGridPresenter: GameGridPresentation {
     
     func requestGames() {
         viewController.startLoading()
@@ -43,7 +43,6 @@ extension GameListPresenter: GameListPresentation {
             } else {
                 // error
             }
-        
         }
     }
     
@@ -52,4 +51,3 @@ extension GameListPresenter: GameListPresentation {
         viewController.showGameDetail()
     }
 }
-
